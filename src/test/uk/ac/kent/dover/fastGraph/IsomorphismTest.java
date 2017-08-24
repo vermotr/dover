@@ -87,7 +87,6 @@ public class IsomorphismTest {
 		assertFalse(Isomorphism.isomorphic(g1, g2));
 	}
 
-	
 	@Rule
 	public ExpectedException thrown1 = ExpectedException.none();
 	@Test
@@ -167,7 +166,7 @@ public class IsomorphismTest {
 		FastGraph g1 = null, g2 = null;
 		try {
 			g1 = FastGraph.randomGraphFactory(100, 300, 1, true, false);
-			g2= FastGraph.randomGraphFactory(100, 300, 2, true, false);
+			g2 = FastGraph.randomGraphFactory(100, 300, 2, true, false);
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
@@ -191,10 +190,211 @@ public class IsomorphismTest {
 		FastGraph g1 = null, g2 = null;
 		try {
 			g1 = FastGraph.randomGraphFactory(500, 2000, 1, true, false);
-			g2= FastGraph.randomGraphFactory(500, 2000, 99, true, false);
+			g2 = FastGraph.randomGraphFactory(500, 2000, 99, true, false);
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
 		assertFalse(Isomorphism.isomorphic(g1, g2));
+	}
+
+	/**
+	 * Tests: Random not isomorphic graphs
+	 */
+	@Test
+	public void testRandomNotIsomorphicGraphs001() throws FastGraphException {
+		FastGraph g1 = null, g2 = null, g3 = null, g4 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(25, 100, 42, true, false);
+			g2 = FastGraph.randomGraphFactory(25, 100, 43, true, false);
+			g3 = FastGraph.randomGraphFactory(25, 100, 44, true, false);
+			g4 = FastGraph.randomGraphFactory(25, 100, 45, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		assertFalse(Isomorphism.isomorphic(g1, g2));
+		assertFalse(Isomorphism.isomorphic(g1, g3));
+		assertFalse(Isomorphism.isomorphic(g1, g4));
+		assertFalse(Isomorphism.isomorphic(g2, g3));
+		assertFalse(Isomorphism.isomorphic(g2, g4));
+		assertFalse(Isomorphism.isomorphic(g3, g4));
+	}
+
+	@Test
+	public void testRandomNotIsomorphicGraphs002() throws FastGraphException {
+		FastGraph g1 = null, g2 = null, g3 = null, g4 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(50, 200, 42, true, false);
+			g2 = FastGraph.randomGraphFactory(50, 200, 43, true, false);
+			g3 = FastGraph.randomGraphFactory(50, 200, 44, true, false);
+			g4 = FastGraph.randomGraphFactory(50, 200, 45, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		assertFalse(Isomorphism.isomorphic(g1, g2));
+		assertFalse(Isomorphism.isomorphic(g1, g3));
+		assertFalse(Isomorphism.isomorphic(g1, g4));
+		assertFalse(Isomorphism.isomorphic(g2, g3));
+		assertFalse(Isomorphism.isomorphic(g2, g4));
+		assertFalse(Isomorphism.isomorphic(g3, g4));
+	}
+
+	@Test
+	public void testRandomNotIsomorphicGraphs003() throws FastGraphException {
+		FastGraph g1 = null, g2 = null, g3 = null, g4 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(100, 400, 42, true, false);
+			g2 = FastGraph.randomGraphFactory(100, 400, 43, true, false);
+			g3 = FastGraph.randomGraphFactory(100, 400, 44, true, false);
+			g4 = FastGraph.randomGraphFactory(100, 400, 45, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		assertFalse(Isomorphism.isomorphic(g1, g2));
+		assertFalse(Isomorphism.isomorphic(g1, g3));
+		assertFalse(Isomorphism.isomorphic(g1, g4));
+		assertFalse(Isomorphism.isomorphic(g2, g3));
+		assertFalse(Isomorphism.isomorphic(g2, g4));
+		assertFalse(Isomorphism.isomorphic(g3, g4));
+	}
+
+	@Test
+	public void testRandomNotIsomorphicGraphs004() throws FastGraphException {
+		FastGraph g1 = null, g2 = null, g3 = null, g4 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(250, 1000, 42, true, false);
+			g2 = FastGraph.randomGraphFactory(250, 1000, 43, true, false);
+			g3 = FastGraph.randomGraphFactory(250, 1000, 44, true, false);
+			g4 = FastGraph.randomGraphFactory(250, 1000, 45, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		assertFalse(Isomorphism.isomorphic(g1, g2));
+		assertFalse(Isomorphism.isomorphic(g1, g3));
+		assertFalse(Isomorphism.isomorphic(g1, g4));
+		assertFalse(Isomorphism.isomorphic(g2, g3));
+		assertFalse(Isomorphism.isomorphic(g2, g4));
+		assertFalse(Isomorphism.isomorphic(g3, g4));
+	}
+
+	@Test
+	public void testRandomNotIsomorphicGraphs005() throws FastGraphException {
+		FastGraph g1 = null, g2 = null, g3 = null, g4 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(500, 2000, 42, true, false);
+			g2 = FastGraph.randomGraphFactory(500, 2000, 43, true, false);
+			g3 = FastGraph.randomGraphFactory(500, 2000, 44, true, false);
+			g4 = FastGraph.randomGraphFactory(500, 2000, 45, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		assertFalse(Isomorphism.isomorphic(g1, g2));
+		assertFalse(Isomorphism.isomorphic(g1, g3));
+		assertFalse(Isomorphism.isomorphic(g1, g4));
+		assertFalse(Isomorphism.isomorphic(g2, g3));
+		assertFalse(Isomorphism.isomorphic(g2, g4));
+		assertFalse(Isomorphism.isomorphic(g3, g4));
+	}
+
+	/**
+	 * Tests: Random isomorphic graphs
+	 */
+	@Test
+	public void testRandomIsomorphicGraphs001() throws FastGraphException {
+		FastGraph g1 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(25, 100, 42, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		FastGraph g2 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 43, false);
+		FastGraph g3 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 44, false);
+		FastGraph g4 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 45, false);
+
+		assertTrue(Isomorphism.isomorphic(g1, g2));
+		assertTrue(Isomorphism.isomorphic(g1, g3));
+		assertTrue(Isomorphism.isomorphic(g1, g4));
+		assertTrue(Isomorphism.isomorphic(g2, g3));
+		assertTrue(Isomorphism.isomorphic(g2, g4));
+		assertTrue(Isomorphism.isomorphic(g3, g4));
+	}
+
+	@Test
+	public void testRandomIsomorphicGraphs002() throws FastGraphException {
+		FastGraph g1 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(50, 200, 42, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		FastGraph g2 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 43, false);
+		FastGraph g3 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 44, false);
+		FastGraph g4 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 45, false);
+
+		assertTrue(Isomorphism.isomorphic(g1, g2));
+		assertTrue(Isomorphism.isomorphic(g1, g3));
+		assertTrue(Isomorphism.isomorphic(g1, g4));
+		assertTrue(Isomorphism.isomorphic(g2, g3));
+		assertTrue(Isomorphism.isomorphic(g2, g4));
+		assertTrue(Isomorphism.isomorphic(g3, g4));
+	}
+
+	@Test
+	public void testRandomIsomorphicGraphs003() throws FastGraphException {
+		FastGraph g1 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(100, 400, 42, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		FastGraph g2 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 43, false);
+		FastGraph g3 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 44, false);
+		FastGraph g4 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 45, false);
+
+		assertTrue(Isomorphism.isomorphic(g1, g2));
+		assertTrue(Isomorphism.isomorphic(g1, g3));
+		assertTrue(Isomorphism.isomorphic(g1, g4));
+		assertTrue(Isomorphism.isomorphic(g2, g3));
+		assertTrue(Isomorphism.isomorphic(g2, g4));
+		assertTrue(Isomorphism.isomorphic(g3, g4));
+	}
+
+	@Test
+	public void testRandomIsomorphicGraphs004() throws FastGraphException {
+		FastGraph g1 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(250, 1000, 42, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		FastGraph g2 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 43, false);
+		FastGraph g3 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 44, false);
+		FastGraph g4 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 45, false);
+
+		assertTrue(Isomorphism.isomorphic(g1, g2));
+		assertTrue(Isomorphism.isomorphic(g1, g3));
+		assertTrue(Isomorphism.isomorphic(g1, g4));
+		assertTrue(Isomorphism.isomorphic(g2, g3));
+		assertTrue(Isomorphism.isomorphic(g2, g4));
+		assertTrue(Isomorphism.isomorphic(g3, g4));
+	}
+
+	@Test
+	public void testRandomIsomorphicGraphs005() throws FastGraphException {
+		FastGraph g1 = null;
+		try {
+			g1 = FastGraph.randomGraphFactory(500, 2000, 42, true, false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		FastGraph g2 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 43, false);
+		FastGraph g3 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 44, false);
+		FastGraph g4 = ExactIsomorphism.generateRandomIsomorphicGraph(g1, 45, false);
+
+		assertTrue(Isomorphism.isomorphic(g1, g2));
+		assertTrue(Isomorphism.isomorphic(g1, g3));
+		assertTrue(Isomorphism.isomorphic(g1, g4));
+		assertTrue(Isomorphism.isomorphic(g2, g3));
+		assertTrue(Isomorphism.isomorphic(g2, g4));
+		assertTrue(Isomorphism.isomorphic(g3, g4));
 	}
 }
